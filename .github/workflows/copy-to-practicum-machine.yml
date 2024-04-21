@@ -34,6 +34,8 @@ jobs:
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           source: "sergzach-test.txt"
           target: "taski"
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
 
       # # Runs a single command using the runners shell
       # - name: Run a one-line script
