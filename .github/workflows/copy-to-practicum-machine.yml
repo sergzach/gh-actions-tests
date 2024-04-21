@@ -25,6 +25,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+
       - name: Copy to remote machine of Practicum student
         uses: appleboy/scp-action@master
         with:
@@ -34,8 +37,6 @@ jobs:
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           source: "sergzach-test.txt"
           target: "taski"
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
 
       # # Runs a single command using the runners shell
       # - name: Run a one-line script
