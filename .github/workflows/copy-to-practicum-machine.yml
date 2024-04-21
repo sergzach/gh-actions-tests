@@ -33,16 +33,16 @@ jobs:
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           source: "sergzach-test.txt"
           target: "taski"
-      # - name: Setup tmate session
-      #   if: ${{ failure() }}
-      #   env:
-      #     SECRETS_HOST: ${{ secrets.HOST }}
-      #     SECRETS_USERNAME: ${{ secrets.USERNAME }}
-      #     SECRETS_SSH_KEY: ${{ secrets.SSH_KEY }}
-      #     SECRETS_PASSPHASE: ${{ secrets.SSH_PASSPHRASE }}
-      #     SECRETS_SOURCE: "sergzach-test.txt"
-      #     SECREtS_TARGET: "taski"
-      #   uses: mxschmitt/action-tmate@v3
+      - name: Setup tmate session
+        if: ${{ failure() }}
+        env:
+          SECRETS_HOST: ${{ secrets.HOST }}
+          SECRETS_USERNAME: ${{ secrets.USERNAME }}
+          SECRETS_SSH_KEY: ${{ secrets.SSH_KEY }}
+          SECRETS_PASSPHASE: ${{ secrets.SSH_PASSPHRASE }}
+          SECRETS_SOURCE: "sergzach-test.txt"
+          SECRETS_TARGET: "taski"
+        uses: mxschmitt/action-tmate@v3
 
       # # Runs a single command using the runners shell
       # - name: Run a one-line script
