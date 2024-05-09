@@ -1,1 +1,1 @@
-См. `.github/workflows`.
+Смотрите каталог `.github/workflows`.
