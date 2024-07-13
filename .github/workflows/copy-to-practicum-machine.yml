@@ -31,7 +31,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
-          source: "sergzach-test.txt"
+          source: "sergzach-test2.txt"
           target: "taski"
       # Run tmate only if the previous step is failure.
       # - name: Setup tmate session
