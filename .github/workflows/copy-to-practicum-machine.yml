@@ -33,7 +33,7 @@ jobs:
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           source: "sergzach-test.txt"
           target: "taski"
-      # Run tmate only if the previous step is failure.
+      # # Run tmate only if the previous step is failure.
       # - name: Setup tmate session
       #   if: ${{ failure() }}
       #   # Environ. variables from secrets for tmate (use env bash command).
