@@ -34,14 +34,14 @@ jobs:
           source: "sergzach-test.txt"
           target: "taski"
       # Run tmate only if the previous step is failure.
-      - name: Setup tmate session
-        if: ${{ failure() }}
-        # Environ. variables from secrets for tmate (use env bash command).
-        env:          
-          SECRETS_HOST: ${{ secrets.HOST }}
-          SECRETS_USERNAME: ${{ secrets.USERNAME }}
-          SECRETS_SSH_KEY: ${{ secrets.SSH_KEY }}
-          SECRETS_PASSPHASE: ${{ secrets.SSH_PASSPHRASE }}
-          SECRETS_SOURCE: "sergzach-test.txt"
-          SECRETS_TARGET: "taski"
-        uses: mxschmitt/action-tmate@v3
+      # - name: Setup tmate session
+      #   if: ${{ failure() }}
+      #   # Environ. variables from secrets for tmate (use env bash command).
+      #   env:          
+      #     SECRETS_HOST: ${{ secrets.HOST }}
+      #     SECRETS_USERNAME: ${{ secrets.USERNAME }}
+      #     SECRETS_SSH_KEY: ${{ secrets.SSH_KEY }}
+      #     SECRETS_PASSPHASE: ${{ secrets.SSH_PASSPHRASE }}
+      #     SECRETS_SOURCE: "sergzach-test.txt"
+      #     SECRETS_TARGET: "taski"
+      #   uses: mxschmitt/action-tmate@v3
