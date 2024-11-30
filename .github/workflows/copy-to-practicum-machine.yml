@@ -36,7 +36,7 @@ jobs:
       # Run tmate only if the previous step is failure.
       - name: Setup tmate session
         if: ${{ failure() }}
-        # Environ. variables from secrets for tmate (use env bash command).
+        # Environ. variables from secrets for tmate (use env bash command)
         env:          
           SECRETS_HOST: ${{ secrets.HOST }}
           SECRETS_USERNAME: ${{ secrets.USERNAME }}
